@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBite - Food Delivery</title>
+    <link rel="stylesheet" href="quickbite.css">
+</head>
+<body>
+<header>
+        <div class="container">
+            <div class="logo">QuickBite</div>
+            <nav>
+                <a href="welcome.html">Home</a>
+                <a href="location.html">Restaurants</a>
+                <a href="aboutus.html">contact us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Hungry? Get food delivered fast</h1>
+                <p>Order from your favorite local restaurants</p>
+                <div class="search">
+                    <select id="district" name="district" style="padding:10px;">
+					<option value="chennai">chennai</option>
+					<option value="thiruvallur">thiruvallur</option>
+					<option value="kanchipuram">kanchipuram</option>
+                   </select>
+					<button class="btn">Find Food</button>
+                </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Delicious food">
+        </div>
+    </section>
+	<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    const findFoodBtn = document.querySelector('.search .btn');
+    const districtSelect = document.getElementById('district');
+
+
+    findFoodBtn.addEventListener('click', function() {
+
+        const selectedDistrict = districtSelect.value;
+        
+
+        if (selectedDistrict && selectedDistrict !== 'chennai') {
+            // Redirect to different pages based on the selected district
+            switch(selectedDistrict) {
+                case 'thiruvallur':
+                    window.location.href = 'quickbite-thiru.html';
+                    break;
+                case 'kanchipuram':
+                    window.location.href = 'quickbite-kan.html';
+                    break;
+                default:
+                    alert('Please select a valid location');
+            }
+        } else {
+            alert('Please select your location first');
+        }
+    });
+});
+	</script>
+    <section class="categories">
+        <div class="container">
+            <h2>Food Categories</h2>
+            <div class="category-grid">
+                <a href="quickbite.html"><div class="category" style="background-color:black;color:white;">
+                    <div class="icon">🍔</div>
+                    <p>Fast Food</p>
+                </div>
+				</a>
+                <a href="cheac.html">
+				<div class="category">
+                    <div class="icon">🍜</div>
+                    <p>Asian Cuisine</p>
+                </div>
+                </a>
+				<a href="chei.html">
+				<div class="category">
+                    <div class="icon">🍕</div>
+                    <p>Italian</p>
+                </div>
+                </a>
+				<a href="ched.html">
+				<div class="category">
+                    <div class="icon">🍰</div>
+                    <p>Desserts</p>
+                </div>
+				</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="restaurants">
+        <div class="container">
+            <h2>Popular Restaurants</h2>
+            <div class="restaurant-grid">
+			
+               <a href="burger_king.html" style="text-decoration:none;color:black;"><div class="restaurant-card">
+                    <img src="https://b.zmtcdn.com/data/reviews_photos/aef/fe9a2a67432a460774176b83d5c40aef_1558339417.jpg" alt="Burger King">
+                    <h3>Burger King</h3>
+                    <p>⭐ 4.5 (500+) • 25-30 min • ₹180 delivery</p>
+                </div>
+                </a>
+				
+                <div class="restaurant-card">
+                    <img src="https://image.cnbcfm.com/api/v1/image/107408345-1714498561917-gettyimages-1945793217-1006_32_nc230605111.jpeg?v=1731697909" alt="Taco Bell">
+                    <h3>Taco Bell</h3>
+                    <p>⭐ 4.1 (600+) • 20-25 min • Free delivery</p>
+                </div>
+                
+         
+                <div class="restaurant-card">
+                    <img src="https://m.economictimes.com/thumb/msid-106875122,width-1600,height-900,resizemode-4,imgsize-91132/wow-momo.jpg">
+                    <h3>WOW MOMO</h3>
+                    <p>⭐ 4.4 (400+) • 15-20 min • ₹80 delivery</p>
+                </div>
+            </div>	
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>QuickBite</h3>
+                    <p>Delivering happiness to your doorstep</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#">Restaurants</a>
+                    <a href="#">Desserts</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>support@quickbite.com</p>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

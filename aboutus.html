@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBite - Food Delivery</title>
+	<link rel="stylesheet" href="aboutus.css">
+    <style>
+        :root {
+            --primary: #ff6b6b;
+            --secondary: #333;
+            --light: #fff;
+            --dark: #222;
+            --gray: #666;
+            --light-gray: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header with right-aligned nav */
+        header {
+            background: var(--light);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        nav a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #ff5252;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">QuickBite</div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Restaurants</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+        <div class="container">
+            <h1>We'd Love to Hear From You</h1>
+            <p>Have questions or feedback? Reach out to our team</p>
+        </div>
+    </section>
+
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" required>
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="order">Order Issue</option>
+                                <option value="delivery">Delivery Feedback</option>
+                                <option value="partner">Restaurant Partnership</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" rows="5" placeholder="Type your message here" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <div class="info-item">
+                        <h3><span>📞</span> Phone</h3>
+                        <p>+91 98765 43210</p>
+                        <p>Monday-Saturday: 8AM-10PM</p>
+                    </div>
+                    <div class="info-item">
+                        <h3><span>✉️</span> Email</h3>
+                        <p>support@quickbite.com</p>
+                        <p>careers@quickbite.com (for jobs)</p>
+                    </div>
+                    <div class="info-item">
+                        <h3><span>🏢</span> Office</h3>
+                        <p>QuickBite Technologies Pvt. Ltd.</p>
+                        <p>123 Food Street, T.Nagar</p>
+                        <p>Chennai, Tamil Nadu 600017</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How do I track my order?<span>+</span></h3>
+                    <div class="faq-answer">
+                        <p>Once your order is confirmed, you'll receive a tracking link via SMS. You can also track your order in real-time through your QuickBite account.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3>What are your delivery hours?<span>+</span></h3>
+                    <div class="faq-answer">
+                        <p>We deliver from 8:00 AM to 10:00 PM daily, though some restaurants may have different operating hours.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3>How can I become a delivery partner?<span>+</span></h3>
+                    <div class="faq-answer">
+                        <p>Visit our careers page or call our delivery partner hotline at +91 87654 32109 to apply.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>QuickBite</h3>
+                    <p>Delivering happiness to your doorstep</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="restaurants.html">Restaurants</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Cities We Serve</h3>
+                    <a href="#">Chennai</a>
+                    <a href="#">Thiruvallur</a>
+                    <a href="#">Kanchipuram</a>
+                </div>
+            </div>
+            <div class="copyright">© 2023 QuickBite. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-item h3').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const plusSign = question.querySelector('span');
+                
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                plusSign.textContent = plusSign.textContent === '+' ? '−' : '+';
+            });
+        });
+    </script>
+</body>
+</html>
